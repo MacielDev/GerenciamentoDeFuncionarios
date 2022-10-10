@@ -11,8 +11,9 @@ const Time = (props) => {
         {props.time.nome}
       </h3>
       <div className="colaboradores">
-        {props.colaboradores.map((colaborador) => (
+        {props.colaboradores.map((colaborador,index) => (
           <Colaborador
+            key={index}
             corTime={props.time.corSecundaria}
             colaborador={colaborador.nome}
             imagem={colaborador.imagem}
